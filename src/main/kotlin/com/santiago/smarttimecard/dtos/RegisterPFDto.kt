@@ -8,8 +8,6 @@ import javax.validation.constraints.NotEmpty
 
 data class RegisterPFDto (
 
-        val id: String? = null,
-
         @get:NotEmpty(message = "Nome não pode ser vazio.")
         @get:Length(min = 3, max = 200, message = "Nome deve conter entre 3 e 200 caracteres.")
         val name: String = "",
@@ -33,5 +31,6 @@ data class RegisterPFDto (
         val companyID: String? = "",
         val valueOfHourWorked: String? = null,
         val numberOfHoursWorkedInTheDay: String? = null,
-        val numberOfHoursInMeal: String? = null
+        val numberOfHoursInMeal: String? = null,
+        val id: String? = null
 )

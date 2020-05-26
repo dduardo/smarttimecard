@@ -61,5 +61,5 @@ class PostingServiceTest {
         Assertions.assertNotNull(lancamento)
     }
 
-    private fun posting(): Posting = Posting(id, Date(), EnumType.START_WORK, "1", "Desccription PostingMock", "Localization")
+    private fun posting(): Posting = Posting(Date(), EnumType.START_WORK, "1", "Desccription PostingMock", "Localization", id)
 }

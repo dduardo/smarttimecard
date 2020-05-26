@@ -7,10 +7,10 @@ import java.util.*
 
 @Document
 data class Posting(
-        @Id val id: String? = null,
         val date: Date,
         val type: EnumType,
         val idEmployee: String,
         val description: String? = "",
-        val localization: String? = ""
+        val localization: String? = "",
+        @Id val id: String? = null
 )

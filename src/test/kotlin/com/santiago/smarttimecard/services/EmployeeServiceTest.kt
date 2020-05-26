@@ -65,5 +65,5 @@ class EmployeeServiceTest {
         Assertions.assertNotNull(employee)
     }
 
-    private fun employee(): Employee = Employee(id, "Name",  email, PasswordUtils().generateBCript("123456"), cpf, EnumPerfil.ROLE_USER, "1")
+    private fun employee(): Employee = Employee("Name",  email, PasswordUtils().generateBCript("123456"), cpf, EnumPerfil.ROLE_USER, "1", id = id)
 }

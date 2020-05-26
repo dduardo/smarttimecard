@@ -1,7 +1,7 @@
 package com.santiago.smarttimecard.dtos
 
 data class CompanyDto(
-        val id: String? = null,
         val companyName: String,
-        val cnpj: String
+        val cnpj: String,
+        val id: String? = null
 )

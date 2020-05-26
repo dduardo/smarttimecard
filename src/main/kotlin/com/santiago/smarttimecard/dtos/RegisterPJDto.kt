@@ -8,8 +8,6 @@ import javax.validation.constraints.NotEmpty
 
 data class RegisterPJDto (
 
-        val id: String? = null,
-
         @get:NotEmpty(message = "Nome não pode ser vazio.")
         @get:Length(min = 3, max = 200, message = "Nome deve conter entre 3 e 200 caracteres.")
         val name: String = "",
@@ -32,5 +30,6 @@ data class RegisterPJDto (
 
         @get:NotEmpty(message = "Razão social não pode ser vazio.")
         @get:Length(min = 5, max = 200, message = "Razão social deve conter entre 5 e 200 caracteres.")
-        val companyName: String = ""
+        val companyName: String = "",
+        val id: String? = null
 )

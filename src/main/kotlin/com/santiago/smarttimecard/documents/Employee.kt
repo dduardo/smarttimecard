@@ -6,7 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
 data class Employee(
-        @Id val id: String? = null,
         val name: String,
         val email: String,
         val password: String,
@@ -15,5 +14,6 @@ data class Employee(
         val companyID: String,
         val valueOfHourWorked: Double? = 0.0,
         val numberOfHoursWorkedInTheDay: Float? = 0.0f,
-        val numberOfHoursInMeal: Float? = 0.0f
+        val numberOfHoursInMeal: Float? = 0.0f,
+        @Id val id: String? = null
 )
