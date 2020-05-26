@@ -17,11 +17,12 @@ import org.springframework.test.context.ActiveProfiles
 @AutoConfigureDataMongo
 class CompanyServiceTest {
 
+    @MockBean
+    private val companyRepository: CompanyRepository? = null
+
     @Autowired
     private val companyService: CompanyService? = null
 
-    @MockBean
-    private val companyRepository: CompanyRepository? = null
     private val CNPJ = "51463645000100"
 
     @BeforeEach
