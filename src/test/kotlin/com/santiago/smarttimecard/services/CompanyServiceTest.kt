@@ -2,6 +2,7 @@ package com.santiago.smarttimecard.services
 
 import com.santiago.smarttimecard.documents.Company
 import com.santiago.smarttimecard.repositories.CompanyRepository
+import org.bson.types.ObjectId
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.BeforeEach
@@ -44,5 +45,5 @@ class CompanyServiceTest {
         Assertions.assertNotNull(company)
     }
 
-    private fun company(): Company = Company("", "Razão Social", CNPJ)
+    private fun company(): Company = Company(companyName = "Company Name1", cnpj = CNPJ)
 }

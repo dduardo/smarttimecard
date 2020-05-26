@@ -4,6 +4,7 @@ import com.santiago.smarttimecard.documents.Employee
 import com.santiago.smarttimecard.enums.EnumPerfil
 import com.santiago.smarttimecard.repositories.EmployeeRepository
 import com.santiago.smarttimecard.utils.PasswordUtils
+import org.bson.types.ObjectId
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -65,5 +66,6 @@ class EmployeeServiceTest {
         Assertions.assertNotNull(employee)
     }
 
-    private fun employee(): Employee = Employee("Name",  email, PasswordUtils().generateBCript("123456"), cpf, EnumPerfil.ROLE_USER, "1", id = id)
+    private fun employee(): Employee = Employee("Name",  email, PasswordUtils().generateBCript("123456"),
+            cpf, EnumPerfil.ROLE_USER, "1", id = id)
 }

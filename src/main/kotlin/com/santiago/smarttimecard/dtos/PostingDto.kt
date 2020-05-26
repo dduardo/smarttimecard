@@ -14,3 +14,4 @@ data class PostingDto(
         val localization: String? = null,
         var id: String? = null
 )
+

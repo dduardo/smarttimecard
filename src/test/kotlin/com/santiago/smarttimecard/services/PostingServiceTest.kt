@@ -3,6 +3,7 @@ package com.santiago.smarttimecard.services
 import com.santiago.smarttimecard.documents.Posting
 import com.santiago.smarttimecard.enums.EnumType
 import com.santiago.smarttimecard.repositories.PostingRepository
+import org.bson.types.ObjectId
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -61,5 +62,6 @@ class PostingServiceTest {
         Assertions.assertNotNull(lancamento)
     }
 
-    private fun posting(): Posting = Posting(Date(), EnumType.START_WORK, "1", "Desccription PostingMock", "Localization", id)
+    private fun posting(): Posting = Posting(Date(), EnumType.START_WORK, "1",
+            "Desccription PostingMock", "Localization", id)
 }
