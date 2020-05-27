@@ -116,13 +116,13 @@ class PostingController(val postingService: PostingService,
 
     private fun validateEmployee(postingDto: PostingDto, result: BindingResult) {
         if (postingDto.idEmployee == null) {
-            result.addError(ObjectError("Employee", "Funcionário não informado."))
+            result.addError(ObjectError("Employee", "Employee not informed."))
             return
         }
 
         val employee: Employee? = employeeService.findById(postingDto.idEmployee)
         if (employee == null) {
-            result.addError(ObjectError("Employee", "Funcionário não encontrado. ID inexistente."));
+            result.addError(ObjectError("Employee", "Employee not found. Id not found."));
         }
     }
 

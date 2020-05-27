@@ -83,7 +83,7 @@ class PostingControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.errors").value("Funcionário não encontrado. ID inexistente."))
+                .andExpect(jsonPath("$.errors").value("Employee not found. Id not found."))
                 .andExpect(jsonPath("$.data").isEmpty())
     }
 
