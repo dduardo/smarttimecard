@@ -99,6 +99,7 @@ class PostingControllerTest {
                 .andExpect(status().isOk())
     }
 
+    @Test
     @WithMockUser
     @Throws(Exception::class)
     fun testRemovePostingAccessDenied() {
