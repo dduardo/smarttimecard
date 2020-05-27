@@ -67,8 +67,6 @@ class PostingController(val postingService: PostingService,
         validateEmployee(postingDto, result)
 
         if (result.hasErrors()) {
-            //TODO for (erro in result.allErrors) response.erros.add(erro.defaultMessage)
-//            for (error in result.allErrors) error.defaultMessage?.let { response.errors.add(it) }
             result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.errors.add(it) } }
             return ResponseEntity.badRequest().body(response)
         }
@@ -108,7 +106,7 @@ class PostingController(val postingService: PostingService,
         val posting: Posting? = postingService.findById(id)
 
         if (posting == null) {
-            response.errors.add("Erro ao remover lançamento. Registro não encontrado para o id $id")
+            response.errors.add("Erro ao remover lançamento. Registro não encontrado para o id $id.")
             return ResponseEntity.badRequest().body(response)
         }
 
@@ -118,13 +116,13 @@ class PostingController(val postingService: PostingService,
 
     private fun validateEmployee(postingDto: PostingDto, result: BindingResult) {
         if (postingDto.idEmployee == null) {
-            result.addError(ObjectError("Employee", "Funcionário não informado"))
+            result.addError(ObjectError("Employee", "Funcionário não informado."))
             return
         }
 
         val employee: Employee? = employeeService.findById(postingDto.idEmployee)
         if (employee == null) {
-            result.addError(ObjectError("Employee", "Funcionário não encontrado. ID inexistente"));
+            result.addError(ObjectError("Employee", "Funcionário não encontrado. ID inexistente."));
         }
     }
 
